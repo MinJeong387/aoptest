@@ -13,7 +13,6 @@ public class MyAspect {
 	public void before(JoinPoint joinPoint) {
 		System.out.println("call [before advice]");
 		System.out.println("메서드 실행 전: " + joinPoint.getSignature().getName());
-
 		Object[] args = joinPoint.getArgs(); // 메서드로 전달된 데이터 객체
 		if (args != null && args.length > 0) {
 			System.out.println("전달된 인자: " + args[0]);
@@ -24,7 +23,5 @@ public class MyAspect {
 	public void after(JoinPoint joinPoint) {
 		System.out.println("call [after advice]");
 		System.out.println("메서드 실행 후: " + joinPoint.getSignature().getName());
-
 	}
-
 }
